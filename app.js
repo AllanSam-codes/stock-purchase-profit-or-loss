@@ -23,17 +23,17 @@ function calculateProfitAndLoss(intial, quantity, current) {
         var loss = (intial - current) * quantity;
         var lossPercentage = (loss / intial) * 100;
 
-        showMessage(`hey the loss is ${loss} and the percent is ${lossPercentage} %`)
+        showMessage(`Hey! the loss is ${loss} and the percent is ${lossPercentage} %`)
 
 
     } else if (current > intial) { // profit logic here
         var profit = (current - intial) * quantity;
         var profitPercentage = (profit / intial) * 100;
 
-        showMessage(`hey the profit is ${profit} and the percent is ${profitPercentage} %`)
+        showMessage(`Hey the profit is ${profit} and the percent is ${profitPercentage} %`)
 
     } else { //  rest logic here
-        showMessage(`hey No pain No Gain and No gain No pain`)
+        showMessage(`Hey !No pain No Gain and No gain No pain !`)
 
     }
 
