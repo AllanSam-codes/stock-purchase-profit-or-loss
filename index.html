@@ -13,13 +13,14 @@
     <div class="container">
         <h1 class="heading">stock purchase profit or loss</h1>
         <label for="Intial price">Intial price :</label>
-        <input type="number" class="input-stock" placeholder="Enter Intial price Here"></input>
+        <input type="number" id="intial-price" class="input-stock" placeholder="Enter Intial price Here"></input>
         <label for=" Quantity"> Quantity of Stocks :</label>
-        <input type="number" class="input-stock" placeholder="Enter Number of Stocks here"></input>
+        <input type="number" id="stocks-quantity" class="input-stock" placeholder="Enter Number of Stocks here"></input>
         <label for="Current Price">Current Price :</label>
-        <input type="number" class="input-stock" placeholder="Enter Current Price Here"></input>
+        <input type="number" id="Current-price" class="input-stock" placeholder="Enter Current Price Here"></input>
+        <label for="stock-btn"></label>
         <button id="stock-btn" class="button">Tell Me!</button>
-        <div id="output-box"></div>
+        <div id="output-box" disabled></div>
     </div>
 
     <script src="/app.js"></script>

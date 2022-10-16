@@ -1,0 +1,13 @@
+.container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+label {
+    display: block;
+    padding: 0.5rem;
+    margin: auto;
+    font-family: 'Mulish', sans-serif;
+    font-size: large;
+}

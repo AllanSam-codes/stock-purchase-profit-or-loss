@@ -1,6 +1,50 @@
-const inputStock = document.querySelectorAll(".input-stock");
+const intialPrice = document.querySelector("#intial-price");
+const stocksQuantity = document.querySelector("#stocks-quantity");
+const currentPrice = document.querySelector("#Current-price");
 const stockBtn = document.querySelector("#stock-btn")
 const outputBox = document.querySelector("#output-box")
 
 
-console.log(inputStock, stockBtn, outputBox);
+//console.log(intialPrice, stocksQuantity, currentPrice);
+//console.log(stockBtn, outputBox);
+
+function clickHandler() {
+    var intiPrice = Number(intialPrice.value);
+    var stcksQuantity = Number(stocksQuantity.value);
+    var currPrice = Number(currentPrice.value);
+
+    calculateProfitAndLoss(intiPrice, stcksQuantity, currPrice)
+}
+
+function calculateProfitAndLoss(intial, quantity, current) {
+
+
+    if (intial > current) { // loss logic here 
+        var loss = (intial - current) * quantity;
+        var lossPercentage = (loss / intial) * 100;
+
+        showMessage(`hey the loss is ${loss} and the percent is ${lossPercentage} %`)
+
+
+    } else if (current > intial) { // profit logic here
+        var profit = (current - intial) * quantity;
+        var profitPercentage = (profit / intial) * 100;
+
+        showMessage(`hey the profit is ${profit} and the percent is ${profitPercentage} %`)
+
+    } else { //  rest logic here
+        showMessage(`hey No pain No Gain and No gain No pain`)
+
+    }
+
+}
+
+function showMessage(message, status) {
+    outputBox.innerHTML = message;
+}
+
+stockBtn.addEventListener('click', clickHandler)
+
+//console.log(calculateProfitAndLoss(100, 10, 10));
+//console.log(calculateProfitAndLoss(10, 10, 100));
+//console.log(calculateProfitAndLoss(10, 10, 10));
