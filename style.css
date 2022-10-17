@@ -33,6 +33,7 @@ label {
     width: 60%;
     height: 5vh;
     font-size: medium;
+    font-family: math;
 }
 
 .button {
@@ -43,8 +44,9 @@ label {
     margin: auto;
     border-radius: 0.5rem;
     border: 1px solid whitesmoke;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--primary-color);
+    background-color: #fff;
+    cursor: pointer;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
