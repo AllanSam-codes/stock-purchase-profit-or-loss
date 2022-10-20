@@ -13,11 +13,20 @@ function clickHandler() {
     var stcksQuantity = Number(stocksQuantity.value);
     var currPrice = Number(currentPrice.value);
 
-    calculateProfitAndLoss(intiPrice, stcksQuantity, currPrice)
+    calculateProfitAndLoss(intiPrice, stcksQuantity, currPrice);
+
+    intialPrice.value = "";
+    stocksQuantity.value = "";
+    currentPrice.value = "";
+
 }
 
 function calculateProfitAndLoss(intial, quantity, current) {
 
+    if (intial < 0 || quantity < 0 || current < 0) {
+        showMessage("Enter valid values")
+        return;
+    }
 
     if (intial > current) { // loss logic here 
         var loss = (intial - current) * quantity;
@@ -33,14 +42,16 @@ function calculateProfitAndLoss(intial, quantity, current) {
         showMessage(`Hey the profit is ${profit} and the percent is ${profitPercentage} %`)
 
     } else { //  rest logic here
-        showMessage(`Hey !No pain No Gain and No gain No pain !`)
+        //showMessage(`Hey !No pain No Gain and No gain No pain !`)
 
     }
 
+
 }
 
-function showMessage(message, status) {
+function showMessage(message) {
     outputBox.innerHTML = message;
+
 }
 
 stockBtn.addEventListener('click', clickHandler)
